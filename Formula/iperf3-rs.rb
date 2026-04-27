@@ -1,25 +1,25 @@
 class Iperf3Rs < Formula
   desc "Rust API for libiperf with live iperf3 metrics export"
   homepage "https://github.com/mi2428/iperf3-rs"
-  version "1.0.0"
+  version "1.0.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.0/iperf3-rs-aarch64-apple-darwin.tar.xz"
-      sha256 "ace2d90a71fc2fb1a016effba7475c4083a2ca39334b589ba595320745a4e6fc"
+      url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.1/iperf3-rs-aarch64-apple-darwin.tar.xz"
+      sha256 "ed6173a1cc19b68dee4bd4ada4c14946287288ad48b472dc6d58c0b860b13a5b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.0/iperf3-rs-x86_64-apple-darwin.tar.xz"
-      sha256 "7de04896ee975bfcb13c1ad3ce23336761aeda25085bc7b49e3355060d39ef45"
+      url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.1/iperf3-rs-x86_64-apple-darwin.tar.xz"
+      sha256 "a0304fae5444c6843e0d3517ca0cf9631a4fd318a8ab19cdf04f8ed3056f8102"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.0/iperf3-rs-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "48671f64b4c2667ef27bd315f0f49674896082ede11bfeacda0ecd44a483b3c5"
+      url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.1/iperf3-rs-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "4a7b259da26337d2aadc28838a2dddd76e2a164905465a1e3218f586eed52702"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.0/iperf3-rs-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "88e7fc347bc6db97bee2993e64ade0455e29c4a772cb5351ddd89c37c1da1f7b"
+      url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.1/iperf3-rs-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "de5f98f14f74cf74b4225ab6847a1146e8d66717265b79b5cf4ad95a2cab348e"
     end
   end
   license all_of: ["MIT", "BSD-3-Clause-LBNL"]
