@@ -4,21 +4,21 @@ class Iperf3Rs < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.3/iperf3-rs-aarch64-apple-darwin.tar.xz"
-      sha256 "181a0c38ec8af3121cfa1198bb9a1834ff911ce4301399ce626af89d2c674d6a"
+      sha256 "ed4696aee6b1641e05c40133bb2373a4d99aa96dfff6091bb71b29e73f06f9d9"
     end
     if Hardware::CPU.intel?
       url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.3/iperf3-rs-x86_64-apple-darwin.tar.xz"
-      sha256 "07ba7df03b235cf4a1b8472b8f666610e49825e01d05cd89969ebafda9d40a70"
+      sha256 "b4dd9d29233229959c2e49e57d7c2866e9c46e67f32650a0f329d0f532dfae4f"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.3/iperf3-rs-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1bd30af86cbbaa4a93af9d85608f8c37ed80e5dee7e82acbb054615e6b2e1887"
+      sha256 "0346d65fadc9c77dcd1ee54416fa866fdd1cc3cdd48b174c146e3e3ef5da0a0b"
     end
     if Hardware::CPU.intel?
       url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.3/iperf3-rs-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "30c80d8b09e3d392ed71986ab3804bde67bc017071fe88972f21d761b3988ee8"
+      sha256 "bfe3ee9e094d45d85bd9178b388383591816808ed8086b9b8bdcec5106c510fe"
     end
   end
   license all_of: ["MIT", "BSD-3-Clause-LBNL"]
@@ -46,10 +46,18 @@ class Iperf3Rs < Formula
   end
 
   def install
-    bin.install "iperf3-rs" if OS.mac? && Hardware::CPU.arm?
-    bin.install "iperf3-rs" if OS.mac? && Hardware::CPU.intel?
-    bin.install "iperf3-rs" if OS.linux? && Hardware::CPU.arm?
-    bin.install "iperf3-rs" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "iperf3-rs"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "iperf3-rs"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "iperf3-rs"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "iperf3-rs"
+    end
 
     install_binary_aliases!
 
