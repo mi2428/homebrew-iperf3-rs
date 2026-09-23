@@ -1,7 +1,6 @@
 class Iperf3Rs < Formula
   desc "Rust API for libiperf with live iperf3 metrics export"
   homepage "https://github.com/mi2428/iperf3-rs"
-  version "1.0.3"
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.3/iperf3-rs-aarch64-apple-darwin.tar.xz"
@@ -61,5 +60,9 @@ class Iperf3Rs < Formula
     # Install any leftover files in pkgshare; these are probably config or
     # sample files.
     pkgshare.install(*leftover_contents) unless leftover_contents.empty?
+  end
+
+  test do
+    assert_match version.to_s, shell_output("#{bin}/iperf3-rs --version")
   end
 end
