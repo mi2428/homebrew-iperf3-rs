@@ -3,22 +3,22 @@ class Iperf3Rs < Formula
   homepage "https://github.com/mi2428/iperf3-rs"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.3/iperf3-rs-aarch64-apple-darwin.tar.xz"
-      sha256 "ed4696aee6b1641e05c40133bb2373a4d99aa96dfff6091bb71b29e73f06f9d9"
+      url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.4/iperf3-rs-aarch64-apple-darwin.tar.xz"
+      sha256 "517d3886b36fe8f5c6328a55de4cc49f4be10221248a20f01e7a4e559bbfc95b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.3/iperf3-rs-x86_64-apple-darwin.tar.xz"
-      sha256 "b4dd9d29233229959c2e49e57d7c2866e9c46e67f32650a0f329d0f532dfae4f"
+      url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.4/iperf3-rs-x86_64-apple-darwin.tar.xz"
+      sha256 "82bb1b0129ecb0bd7567598b694dbd14e383394948253fd7bea438b84822a222"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.3/iperf3-rs-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "0346d65fadc9c77dcd1ee54416fa866fdd1cc3cdd48b174c146e3e3ef5da0a0b"
+      url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.4/iperf3-rs-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "312d4f5028ea89f9221a5f4939ed27057b8ae44a79fbe19aed9352c24e51782d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.3/iperf3-rs-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "bfe3ee9e094d45d85bd9178b388383591816808ed8086b9b8bdcec5106c510fe"
+      url "https://github.com/mi2428/iperf3-rs/releases/download/v1.0.4/iperf3-rs-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "54d902de2e6c778b21bd83de773b8ed5bf410b9cac12575cff512c18dc1b9acb"
     end
   end
   license all_of: ["MIT", "BSD-3-Clause-LBNL"]
